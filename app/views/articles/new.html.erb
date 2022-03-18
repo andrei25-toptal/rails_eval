@@ -1,0 +1,14 @@
+<h1> Create article </h1>
+
+<%= form_for @article do |f| %>
+  <p> title </p>
+  <%= f.text_field :title %>
+
+  <p> body </p>
+  <%= f.text_area :body, :size => "60x12" %>
+
+  <p> tag </p>
+  <%= f.collection_select :tags, Tag.all,:id,:name, include_blank: true %>
+
+  <%= submit_tag "Create" %>
+<% end %> 

@@ -1,0 +1,9 @@
+<h1>Show article</h1>
+
+<p> <%= @article.title %> </p>
+<p> <%= @article.user.name %> </p>
+<p> <%= @article.user.email %> </p>
+
+<% @article.tags.each do |tag| %>
+  <%= tag.name %>
+<% end %>

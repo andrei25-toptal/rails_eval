@@ -1,0 +1,13 @@
+<h1> User index </h1>
+
+<% @users.each do |user| %>
+  <br/>
+  <p> <%= user.name %> </p>
+  <p> <%= user.email %> </p>
+
+  <% user.articles.each do |article| %>
+    <p> <%= article.title %> </p>
+    <p> <%= article.body.truncate(10) %> </p>
+  <% end %>
+
+<% end %>
